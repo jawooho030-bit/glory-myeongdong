@@ -9,61 +9,83 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #fafafa;
+  background: #fdfbf7;
   color: #111;
 }
 
+/* GLORY 品牌色 */
+:root {
+  --glory-primary: #b08e71;
+  --glory-cta: #06C755;
+}
+
+/* HERO */
 .hero {
-  background: linear-gradient(135deg,#111,#333);
-  color: white;
-  padding: 60px 20px;
+  background: linear-gradient(135deg, #b08e71, #fdfbf7);
+  color: #111;
+  padding: 70px 20px;
   text-align: center;
 }
 
 .hero h1 {
-  font-size: 28px;
+  font-size: 26px;
   margin-bottom: 10px;
+  line-height: 1.4;
 }
 
 .hero p {
   opacity: 0.85;
+  font-size: 14px;
+  margin-bottom: 20px;
 }
 
+/* CTA */
 .cta {
-  margin-top: 20px;
   display: inline-block;
-  padding: 14px 24px;
-  background: #00c300;
+  padding: 14px 22px;
+  background: var(--glory-cta);
   color: white;
-  border-radius: 8px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* SECTION */
 .section {
-  padding: 40px 20px;
+  padding: 30px 18px;
   max-width: 900px;
   margin: auto;
 }
 
+/* CARD */
 .card {
   background: white;
-  padding: 20px;
-  margin-bottom: 15px;
-  border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  padding: 18px;
+  margin-bottom: 14px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+  border-left: 4px solid var(--glory-primary);
 }
 
 .title {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
+  color: var(--glory-primary);
 }
 
-.footer {
-  text-align: center;
-  padding: 30px;
-  font-size: 12px;
-  color: #999;
+/* FLOAT LINE BUTTON */
+.float-line {
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  background: #06C755;
+  color: white;
+  padding: 14px 16px;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  z-index: 999;
 }
 </style>
 
@@ -71,61 +93,68 @@ body {
 
 <body>
 
+<!-- HERO 首屏（转化核心） -->
 <div class="hero">
-  <h1>GLORY 明洞店</h1>
-  <p>韓國皮膚科｜客製化肌膚管理｜明洞核心地段</p>
-  <a class="cta" href="https://line.me/R/ti/p/@你的LINEID" target="_blank">
-    立即LINE諮詢
+  <h1>韓國皮膚科管理｜改善毛孔・痘痘・暗沉</h1>
+  <p>明洞核心地段｜韓國醫師一對一診療｜中文可溝通</p>
+
+  <a class="cta" href="https://line.me/R/ti/p/@484lolur" target="_blank">
+    📩 免費LINE諮詢（獲取皮膚建議）
   </a>
 </div>
 
+<!-- CONTENT -->
 <div class="section">
 
   <div class="card">
-    <div class="title">✨ 為什麼選擇 GLORY？</div>
+    <div class="title">✨ 為什麼選 GLORY？</div>
     <p>
-    ・韓國醫師一對一諮詢<br>
-    ・客製化皮膚治療方案<br>
-    ・適合海外旅客（中文/英文溝通）<br>
-    ・明洞地區核心醫美診所
+    ・韓國醫師直接診療<br>
+    ・一對一皮膚狀態分析<br>
+    ・客製化治療方案<br>
+    ・支援中文 / 英文溝通
     </p>
   </div>
 
   <div class="card">
-    <div class="title">💉 主打療程</div>
+    <div class="title">💉 常見改善問題</div>
     <p>
-    ・毛孔 / 粉刺管理<br>
-    ・皮膚鎮定修復療程<br>
-    ・雷射提亮膚色<br>
-    ・抗老緊緻管理（HIFU / Skin Booster）
+    ・毛孔粗大 / 粉刺 / 黑頭<br>
+    ・痘痘反覆 / 敏感肌修復<br>
+    ・膚色暗沉 / 不均勻提亮<br>
+    ・抗老緊緻 / 膠原管理
     </p>
   </div>
 
   <div class="card">
-    <div class="title">📍 流程（適合海外客）</div>
+    <div class="title">📍 就診流程</div>
     <p>
     1️⃣ LINE預約<br>
-    2️⃣ 到店諮詢（中文協助）<br>
-    3️⃣ 醫師皮膚診斷<br>
-    4️⃣ 客製療程<br>
-    5️⃣ 當天可施作 / 或安排回訪
+    2️⃣ 到院皮膚檢測<br>
+    3️⃣ 醫師1對1分析<br>
+    4️⃣ 客製療程建議<br>
+    5️⃣ 當日或預約施作
     </p>
   </div>
 
   <div class="card">
-    <div class="title">⚡ 快速預約</div>
-    <p>
-    點擊下方直接進入LINE，不需填表
-    </p>
-    <a class="cta" href="https://line.me/R/ti/p/@你的LINEID" target="_blank">
+    <div class="title">⚡ 立即獲取專屬方案</div>
+    <p>點擊LINE，獲取韓國醫師皮膚建議（免填表）</p>
+
+    <a class="cta" href="https://line.me/R/ti/p/@484lolur" target="_blank">
       LINE立即諮詢
     </a>
   </div>
 
 </div>
 
-<div class="footer">
-GLORY Myeongdong Clinic Landing Page ｜ Powered by GitHub Pages
+<!-- FLOAT LINE -->
+<a class="float-line" href="https://line.me/R/ti/p/@484lolur" target="_blank">
+LINE
+</a>
+
+<div class="footer" style="text-align:center;padding:25px;font-size:12px;color:#999;">
+GLORY Myeongdong Clinic ｜ Landing Page
 </div>
 
 </body>
